@@ -48,6 +48,7 @@ Open the **appsettings.json** file.
 
 Add AWS configuration such as profile name and region.
 This configuration tells the application which AWS account and region to use.
+
 "AWS": {
   "Profile": "default",
   "Region": "ap-south-1"
