@@ -27,7 +27,7 @@ This project demonstrates how to integrate **Amazon S3** with an **ASP.NET Core 
 ### 3. Install AWS S3 SDK
 Run the following command in **Package Manager Console**:
 
-```powershell
+- Install the following package:
 Install-Package AWSSDK.S3
 
 ### 4. Register AWS Services
