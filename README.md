@@ -1,27 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Amazon S3 Integration – ASP.NET Core Web API</title>
-    <style>
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            line-height: 1.6;
-        }
-        h2, h3 {
-            color: #232f3e;
-        }
-        pre {
-            background: #f4f4f4;
-            padding: 12px;
-            overflow-x: auto;
-        }
-        ul {
-            margin-left: 20px;
-        }
-    </style>
-</head>
-<body>
+# ☁️ Amazon S3 Integration – ASP.NET Core Web API
+
+## 🚀 Steps
+
+### 1. Create ASP.NET Core Web API Project
+- Create a new ASP.NET Core Web API project.
+
+### 2. Install AWS Core Package
+- Install `Amazon.Extensions.NETCore.Setup` from NuGet.
+
+### 3. Install AWS S3 SDK
+```powershell
+Install-Package AWSSDK.S3
+
+
 
 <h2>4. Register AWS Services in <code>Program.cs</code></h2>
 
@@ -143,5 +134,3 @@ to integrating <strong>Amazon S3</strong> with an <strong>ASP.NET Core Web API</
 using official AWS SDKs and best practices.
 </p>
 
-</body>
-</html>
