@@ -1,5 +1,7 @@
-<p align="center" style="font-size:14px; font-weight:bold;">
-  ☁️ **Amazon S3 Integration – ASP.NET Core Web API**
+<p align="center">
+
+## ☁️ Amazon S3 Integration – ASP.NET Core Web API
+
 </p>
 
 <p align="center">
