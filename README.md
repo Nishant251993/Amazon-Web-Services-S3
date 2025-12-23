@@ -88,8 +88,10 @@ If the bucket does not exist, it should create a new bucket.
 [HttpPost]
 public async Task<IActionResult> CreateBucketAsync(string bucketName)
 {
+
     var bucketExists = await Amazon.S3.Util.AmazonS3Util
         .DoesS3BucketExistV2Async(_s3Client, bucketName);
+        
     if (bucketExists)
     {
         return BadRequest($"Bucket {bucketName} already exists.");
