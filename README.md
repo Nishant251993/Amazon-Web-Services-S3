@@ -42,3 +42,77 @@ builder.Services.AddDefaultAWSOptions(
 
 builder.Services.AddAWSService<IAmazonS3>();
 
+### 5. Configure AWS Settings
+
+Open the **appsettings.json** file.
+
+Add AWS configuration such as profile name and region.
+This configuration tells the application which AWS account and region to use.
+
+---
+
+### 6. Create Bucket Controller
+
+Inside the **Controllers** folder, create a new empty API controller.
+
+Name the controller **BucketsController**.
+This controller will be responsible for bucket-related operations.
+
+---
+
+### 7. Inject Amazon S3 Client
+
+Open the **BucketsController** file.
+
+Inject the Amazon S3 client using constructor injection.
+This allows the controller to communicate with Amazon S3 services.
+
+---
+
+### 8. Add API to Create S3 Bucket
+
+Inside the **BucketsController**, add an API method to create an Amazon S3 bucket.
+
+The API should first check whether the bucket already exists.
+If the bucket does not exist, it should create a new bucket.
+
+---
+
+### 9. Create File Controller
+
+Inside the **Controllers** folder, create another controller named **FileController**.
+
+This controller will handle file-related operations such as uploading and downloading files.
+
+---
+
+### 10. Implement File Operations
+
+Use the **FileController** to implement the following features:
+Upload files to Amazon S3  
+Download files from Amazon S3  
+Delete files from Amazon S3 (optional)
+
+---
+
+### 11. Follow Security Best Practices
+
+Do not hardcode AWS credentials in the application.
+Use IAM roles or AWS profiles wherever possible.
+Grant only minimum required permissions to Amazon S3 resources.
+
+---
+
+### 12. Test the Integration
+
+Run the application and test the APIs using Swagger or Postman.
+
+Verify that buckets are created successfully and files are uploaded to Amazon S3.
+
+---
+
+### Conclusion
+
+By following these steps, Amazon S3 can be successfully integrated with an ASP.NET Core Web API.
+This setup is scalable, secure, and suitable for production use.
+
