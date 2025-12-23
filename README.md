@@ -70,13 +70,12 @@ Open the **BucketsController** file.
 
 Inject the Amazon S3 client using constructor injection.
 This allows the controller to communicate with Amazon S3 services.
-
 private readonly IAmazonS3 _s3Client;
-
 public BucketsController(IAmazonS3 s3Client)
 {
     _s3Client = s3Client;
 }
+
 ---
 
 ### 8. Add API to Create S3 Bucket
@@ -85,6 +84,7 @@ Inside the **BucketsController**, add an API method to create an Amazon S3 bucke
 
 The API should first check whether the bucket already exists.
 If the bucket does not exist, it should create a new bucket.
+
 [HttpPost]
 public async Task<IActionResult> CreateBucketAsync(string bucketName)
 {
