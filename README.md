@@ -36,7 +36,7 @@ Open the **Program.cs** file of your ASP.NET Core Web API project.
 
 Register AWS services after creating the application builder and before building the application.
 
---csharp
+
 builder.Services.AddDefaultAWSOptions(
     builder.Configuration.GetAWSOptions());
 
