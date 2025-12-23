@@ -85,9 +85,6 @@ Inside the **BucketsController**, add an API method to create an Amazon S3 bucke
 The API should first check whether the bucket already exists.
 If the bucket does not exist, it should create a new bucket.
 
-[HttpPost]
-
-
 public async Task<IActionResult> CreateBucketAsync(string bucketName)
 {
 
