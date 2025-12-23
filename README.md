@@ -44,6 +44,8 @@ builder.Services.AddDefaultAWSOptions(
 
 builder.Services.AddAWSService<IAmazonS3>();
 
+---
+
 ### 5. Configure AWS Settings
 
 Open the **appsettings.json** file.
@@ -55,6 +57,7 @@ This configuration tells the application which AWS account and region to use.
   "Profile": "default",
   "Region": "ap-south-1"
 }
+
 ---
 
 ### 6. Create Bucket Controller
