@@ -36,7 +36,7 @@ Open the **Program.cs** file of your ASP.NET Core Web API project.
 
 Register AWS services after creating the application builder and before building the application.
 
-```csharp
+--csharp
 builder.Services.AddDefaultAWSOptions(
     builder.Configuration.GetAWSOptions());
 
@@ -48,7 +48,10 @@ Open the **appsettings.json** file.
 
 Add AWS configuration such as profile name and region.
 This configuration tells the application which AWS account and region to use.
-
+"AWS": {
+  "Profile": "default",
+  "Region": "ap-south-1"
+}
 ---
 
 ### 6. Create Bucket Controller
@@ -67,6 +70,12 @@ Open the **BucketsController** file.
 Inject the Amazon S3 client using constructor injection.
 This allows the controller to communicate with Amazon S3 services.
 
+private readonly IAmazonS3 _s3Client;
+
+public BucketsController(IAmazonS3 s3Client)
+{
+    _s3Client = s3Client;
+}
 ---
 
 ### 8. Add API to Create S3 Bucket
@@ -75,6 +84,21 @@ Inside the **BucketsController**, add an API method to create an Amazon S3 bucke
 
 The API should first check whether the bucket already exists.
 If the bucket does not exist, it should create a new bucket.
+[HttpPost]
+public async Task<IActionResult> CreateBucketAsync(string bucketName)
+{
+    var bucketExists = await Amazon.S3.Util.AmazonS3Util
+        .DoesS3BucketExistV2Async(_s3Client, bucketName);
+
+    if (bucketExists)
+    {
+        return BadRequest($"Bucket {bucketName} already exists.");
+    }
+
+    await _s3Client.PutBucketAsync(bucketName);
+
+    return Created("bucket", $"Bucket {bucketName} created successfully.");
+}
 
 ---
 
