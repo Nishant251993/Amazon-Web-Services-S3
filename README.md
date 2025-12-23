@@ -30,6 +30,8 @@ Run the following command in **Package Manager Console**:
 - Install the following package:
 Install-Package AWSSDK.S3
 
+---
+
 ### 4. Register AWS Services
 
 Open the **Program.cs** file of your ASP.NET Core Web API project.
