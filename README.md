@@ -1,6 +1,7 @@
-<p align="center">
-<span font-weight:bold;> ☁️ Amazon S3 Integration – ASP.NET Core Web API </span>
+<p align="center" style="font-size:14px; font-weight:bold;">
+  ☁️ Amazon S3 Integration – ASP.NET Core Web API
 </p>
+
 <p align="center">
   <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" width="120" />
 </p>
